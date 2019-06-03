@@ -28,7 +28,7 @@ window.onload = () => {
 
 function handlerToggleLed() {
     ledState = !ledState;
-    if (state) {
+    if (ledState) {
       liff.sendMessages([
         {
             type: "text",
