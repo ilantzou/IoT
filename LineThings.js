@@ -28,6 +28,16 @@ window.onload = () => {
 
 function handlerToggleLed() {
     ledState = !ledState;
+      liff.sendMessages([
+        {
+            type: "text",
+            text: "開關被開啟。",
+        }, 
+        ]).then(function () {
+            window.alert("觸發事件！");
+        }).catch(function (error) {
+            window.alert("錯誤碼: " + error);
+        });
 
     uiToggleLedButton(ledState);
     liffToggleDeviceLedState(ledState);
