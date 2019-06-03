@@ -75,7 +75,7 @@ function uiToggleStateButton(pressed) {
         liff.sendMessages([
         {
             type: "text",
-            text: "偵測到三樓窗戶入侵行為。",
+            text: "偵測到三樓窗戶第 " + clickCount + " 次入侵行為。",
         }, 
         ]).then(function () {
             window.alert("入侵偵測事件！\n已經回報機器人。");
