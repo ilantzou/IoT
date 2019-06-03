@@ -1,6 +1,5 @@
 // User service UUID: Change this to your generated service UUID
-const USER_SERVICE_UUID         = 'd2b5f542-c4ca-44e1-8133-aa57006b9a62'; // LED, Button
-//const USER_SERVICE_UUID         = '39c0957e-862f-43f3-896b-2e847985f28e'; //Tzou_IoT1
+const USER_SERVICE_UUID         = 'f2ad74e9-5697-4b49-90d8-a6aa54e4cc9f'; // LED, Button
 // User service characteristics
 const LED_CHARACTERISTIC_UUID   = 'E9062E71-9E62-4BC6-B0D3-35CDCD9B027B';
 const BTN_CHARACTERISTIC_UUID   = '62FBD229-6EDD-4D1A-B554-5C4E1BB29169';
