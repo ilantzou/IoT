@@ -67,7 +67,7 @@ function uiToggleStateButton(pressed) {
             text: "按鈕被按下喔。",
         }, 
         ]).then(function () {
-            window.alert("出任務>>" + obj.ADDR);
+            window.alert("觸發事件！");
         }).catch(function (error) {
             window.alert("位置傳送失敗錯誤碼: " + error);
         });
