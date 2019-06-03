@@ -1,0 +1,68 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src=" https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script src="LineThings.js"></script>
+    <link rel="stylesheet" type="text/css" href="liff.css" />
+  </head>
+
+  <body>
+    <!-- Title -->
+    <h2>LineThings</h2>
+    <hr />
+    <p>
+      <img id="loading-animation" class="" src="loading.gif" height="14px" />
+      <span id="status" class="inactive">Device disconnected</span>
+    </p>
+    <hr />
+    <span id="userName"></span>：您好。<br/>
+    <img src=""
+          hidden="true"
+          id="userPic"
+          style="width:200px; height: 200px;"
+          alt="Italian Trulli">
+    <hr />
+    <div id="controls" class="hidden">
+      <!-- Device Info Table -->
+      <table class="device-info-table">
+        <tr>
+          <th class="device-info-cell device-info-key">裝置名稱</th>
+          <td class="device-info-cell device-info-val" id="device-name"></td>
+        </tr>
+        <tr>
+          <th class="device-info-cell device-info-key">ID</th>
+          <td class="device-info-cell device-info-val" id="device-id"></td>
+        </tr>
+        <tr>
+          <th class="device-info-cell device-info-key">PSDI</th>
+          <td class="device-info-cell device-info-val" id="device-psdi"></td>
+        </tr>
+        <tr>
+          <th class="device-info-cell device-info-key">按鍵狀態</th>
+          <td class="device-info-cell device-info-val">
+           <button onclick="javascript:location.href='https://script.google.com/macros/s/AKfycbz5PRzl3VOxccM61PICMTSNKJt2fNMhpd7oyCU-jFuqeL6MAPE/exec?NotifyToken=iFY0a7gPFsPDY8pP74t5z1dfzlT8kzEyuchfbOE77Do&msg=有人按鍵&img=https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2019/03/11/realtime/6031928.jpg'" id="btn-state" class="btn btn-state" disabled>鬆開</button>
+          </td>
+        </tr>
+        <tr>
+          <th class="device-info-cell device-info-key">點擊次數</th>
+          <td class="device-info-cell device-info-val" id="click-count">0</td>
+        </tr>
+      </table>
+      <hr />
+      <!-- Toggle LED -->
+      <p>
+        <button id="btn-led-toggle" class="btn btn-led-toggle" onclick="handlerToggleLed()">開燈</button>
+        <br>
+        <button id="btn-led-toggle1"  onclick="handlerToggleLed();javascript:location.href='https://script.google.com/macros/s/AKfycbz5PRzl3VOxccM61PICMTSNKJt2fNMhpd7oyCU-jFuqeL6MAPE/exec?NotifyToken=iFY0a7gPFsPDY8pP74t5z1dfzlT8kzEyuchfbOE77Do&msg=有人開關燈&img=https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2019/03/11/realtime/6031928.jpg'">...</button>
+        <br>
+        <button onclick="javascript:location.href='https://script.google.com/macros/s/AKfycbz5PRzl3VOxccM61PICMTSNKJt2fNMhpd7oyCU-jFuqeL6MAPE/exec?NotifyToken=iFY0a7gPFsPDY8pP74t5z1dfzlT8kzEyuchfbOE77Do&msg=有人按鍵&img=https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2019/03/11/realtime/6031928.jpg'">...</button> 
+ 
+
+      </p>
+      <hr />
+    </div>
+  </body>
+
+</html>
