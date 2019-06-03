@@ -28,6 +28,7 @@ window.onload = () => {
 
 function handlerToggleLed() {
     ledState = !ledState;
+    if (state) {
       liff.sendMessages([
         {
             type: "text",
@@ -38,7 +39,7 @@ function handlerToggleLed() {
         }).catch(function (error) {
             window.alert("錯誤碼: " + error);
         });
-
+     }   
     uiToggleLedButton(ledState);
     liffToggleDeviceLedState(ledState);
 }
