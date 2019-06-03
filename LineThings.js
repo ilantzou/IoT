@@ -43,6 +43,16 @@ function uiToggleLedButton(state) {
 
     if (state) {
       el.classList.add("led-on");
+      liff.sendMessages([
+        {
+            type: "text",
+            text: "開關被開啟。",
+        }, 
+        ]).then(function () {
+            window.alert("觸發事件！");
+        }).catch(function (error) {
+            window.alert("錯誤碼: " + error);
+        });
     } else {
       el.classList.remove("led-on");
     }
@@ -69,7 +79,7 @@ function uiToggleStateButton(pressed) {
         ]).then(function () {
             window.alert("觸發事件！");
         }).catch(function (error) {
-            window.alert("位置傳送失敗錯誤碼: " + error);
+            window.alert("錯誤碼: " + error);
         });
     } else {
         el.classList.remove("按下");
