@@ -31,10 +31,10 @@ function handlerToggleLed() {
       liff.sendMessages([
         {
             type: "text",
-            text: "開關被開啟。",
+            text: "使用者開啟開關。",
         }, 
         ]).then(function () {
-            window.alert("觸發事件！");
+            //window.alert("觸發事件！");
         }).catch(function (error) {
             window.alert("錯誤碼: " + error);
         });
@@ -53,16 +53,6 @@ function uiToggleLedButton(state) {
 
     if (state) {
       el.classList.add("led-on");
-      liff.sendMessages([
-        {
-            type: "text",
-            text: "開關被開啟。",
-        }, 
-        ]).then(function () {
-            window.alert("觸發事件！");
-        }).catch(function (error) {
-            window.alert("錯誤碼: " + error);
-        });
     } else {
       el.classList.remove("led-on");
     }
@@ -84,10 +74,10 @@ function uiToggleStateButton(pressed) {
         liff.sendMessages([
         {
             type: "text",
-            text: "按鈕被按下喔。",
+            text: "偵測到三樓窗戶入侵行為。",
         }, 
         ]).then(function () {
-            window.alert("觸發事件！");
+            window.alert("入侵偵測事件！\n已經回報機器人。");
         }).catch(function (error) {
             window.alert("錯誤碼: " + error);
         });
