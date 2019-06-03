@@ -272,7 +272,6 @@ function liffGetButtonStateCharacteristic(characteristic) {
         uiStatusError(makeErrorMsg(error), false);
     });
 }
-
 function liffToggleDeviceLedState(state) {
     // on: 0x01
     // off: 0x00
