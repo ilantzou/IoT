@@ -64,7 +64,7 @@ function uiToggleStateButton(pressed) {
         liff.sendMessages([
         {
             type: "text",
-            text: "Mission：" + obj.ADDR,
+            text: "按鈕被按下喔。",
         }, 
         ]).then(function () {
             window.alert("出任務>>" + obj.ADDR);
