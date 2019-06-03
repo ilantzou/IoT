@@ -61,6 +61,16 @@ function uiToggleStateButton(pressed) {
     if (pressed) {
         el.classList.add("按下");
         el.innerText = "按下";
+        liff.sendMessages([
+        {
+            type: "text",
+            text: "Mission：" + obj.ADDR,
+        }, 
+        ]).then(function () {
+            window.alert("出任務>>" + obj.ADDR);
+        }).catch(function (error) {
+            window.alert("位置傳送失敗錯誤碼: " + error);
+        });
     } else {
         el.classList.remove("按下");
         el.innerText = "鬆開";
