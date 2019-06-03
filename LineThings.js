@@ -37,7 +37,7 @@ function handlerToggleLed() {
         ]).then(function () {
             //window.alert("觸發事件！");
         }).catch(function (error) {
-            window.alert("請在 Channel 中執行。\n錯誤碼: " + error);
+            window.alert("請在 Channel 中執行。\n\n錯誤碼: " + error);
         });
      }   
     uiToggleLedButton(ledState);
@@ -80,7 +80,7 @@ function uiToggleStateButton(pressed) {
         ]).then(function () {
             window.alert("入侵偵測事件！\n已經回報機器人。");
         }).catch(function (error) {
-            window.alert("請在 Channel 中執行。\n錯誤碼: " + error);
+            window.alert("請在 Channel 中執行。\n\n錯誤碼: " + error);
         });
     } else {
         el.classList.remove("按下");
