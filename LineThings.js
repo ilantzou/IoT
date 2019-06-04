@@ -29,7 +29,17 @@ window.onload = () => {
 function getQueryString() {
 
 var url = location.href;
-window.alert(url);
+//window.alert(url);
+      liff.sendMessages([
+        {
+            type: "text",
+            text:  url,
+        }, 
+        ]).then(function () {
+            //window.alert("觸發事件！");
+        }).catch(function (error) {
+            window.alert("請在 Channel 中執行。\n\n錯誤碼: " + error);
+        });
 if (url.indexOf('?')!=-1)
 {
     var id = "";
