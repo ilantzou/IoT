@@ -29,7 +29,7 @@ window.onload = () => {
 function getQueryString() {
 
 var url = location.href;
-alert(url);
+window.alert(url);
 if (url.indexOf('?')!=-1)
 {
     var id = "";
@@ -44,7 +44,7 @@ if (url.indexOf('?')!=-1)
     }
     //alert(id);
 } else {
-    alert("請從 Channel 開啟。");
+    window.alert("請從 Channel 開啟。");
     liff.closeWindow();
 }    
 
