@@ -64,15 +64,16 @@ if (url.indexOf('?')!=-1)
 function handlerToggleLed() {
     ledState = !ledState;
     if (ledState == true) {
+      var msg = "使用者開啟開關。";
       liff.sendMessages([
         {
             type: "text",
-            text: "使用者開啟開關。",
+            text: msg
         }, 
         ]).then(function () {
             //window.alert("觸發事件！");
         }).catch(function (error) {
-            window.alert("請在 Channel 中執行。\n\n錯誤碼: " + error);
+            window.alert("\n請在 Channel 中執行。\n\n錯誤碼: " + error);
         });
      }   
     uiToggleLedButton(ledState);
@@ -103,19 +104,19 @@ function uiCountPressButton() {
 
 function uiToggleStateButton(pressed) {
     const el = document.getElementById("btn-state");
-
+    var msg = "偵測到三樓窗戶第 " + (clickCount+1) + " 次入侵行為。";
     if (pressed) {
         el.classList.add("按下");
         el.innerText = "按下";
         liff.sendMessages([
         {
             type: "text",
-            text: "偵測到三樓窗戶第 " + (clickCount+1) + " 次入侵行為。",
+            text: msg
         }, 
         ]).then(function () {
-            window.alert("入侵偵測事件！\n已經回報機器人。");
+            window.alert("\n入侵偵測事件！\n" + msg + "\n\n已經回報機器人。");
         }).catch(function (error) {
-            window.alert("請在 Channel 中執行。\n\n錯誤碼: " + error);
+            window.alert("\n請在 Channel 中執行。\n\n錯誤碼: " + error);
         });
     } else {
         el.classList.remove("按下");
