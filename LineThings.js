@@ -37,15 +37,20 @@ if (url.indexOf('?')!=-1)
     for(i=0;i<=ary.length-1;i++)
     {
         //如果資料名稱為id的話那就把他取出來
-        if(ary[i].split('=')[0] == 'id')
+        if(ary[i].split('=')[0] == 'id') {
             id = decodeURI(ary[i].split('=')[1]);
-            window.id = id.replace(/%40/,"@");
+            id = id.replace(/%40/,"@");
             const idname = document.getElementById("id");
-            idname.innerText = url + window.id;
+            idname.innerText = id;
+        }
+    }
+    if (!id) {
+       window.alert("請從 Channel 開啟。");
+       liff.closeWindow();
     }
     //alert(id);
 } else {
-    //window.alert("請從 Channel 開啟。");
+    window.alert("請從 Channel 開啟。");
     liff.closeWindow();
 }    
 
