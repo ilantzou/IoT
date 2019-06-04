@@ -36,7 +36,7 @@ var url = location.href;
             text:  url,
         }, 
         ]).then(function () {
-            //window.alert("觸發事件！");
+            window.alert(location.href);
         }).catch(function (error) {
             window.alert("請在 Channel 中執行。\n\n錯誤碼: " + error);
         });
