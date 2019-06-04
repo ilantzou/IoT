@@ -39,9 +39,9 @@ if (url.indexOf('?')!=-1)
         //如果資料名稱為id的話那就把他取出來
         if(ary[i].split('=')[0] == 'id')
             id = decodeURI(ary[i].split('=')[1]);
-            windiw.id = id.replace(/%40/,"@");
+            window.id = id.replace(/%40/,"@");
             const idname = document.getElementById("id");
-            idname.innerText = url + windiw.id;
+            idname.innerText = url + window.id;
     }
     //alert(id);
 } else {
