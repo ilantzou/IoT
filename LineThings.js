@@ -18,10 +18,35 @@ let clickCount = 0;
 
 window.onload = () => {
     initializeApp();
-    window.displayName = ''
-    window.pictureUrl = ''
+    window.displayName = '';
+    window.pictureUrl = '';
+    getQueryString();
 };
+// ----------------- //
+// 自行處理 //
+// ----------------- //
+////////////////////////////////////////////////////////
+function getQueryString() {
 
+var url = location.href;
+if (url.indexOf('?')!=-1)
+{
+    var id = "";
+    var ary = url.split('?')[1].split('&');
+    for(i=0;i<=ary.length-1;i++)
+    {
+        //如果資料名稱為id的話那就把他取出來
+        if(ary[i].split('=')[0] == 'id')
+            id = decodeURI(ary[i].split('=')[1]);
+            id = id.replace(/%40/,"@");
+    }
+    //alert(id);
+} else {
+    liff.closeWindow();
+}    
+
+}
+////////////////////////////////////////////////////////
 // ----------------- //
 // Handler functions //
 // ----------------- //
