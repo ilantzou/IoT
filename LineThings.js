@@ -30,16 +30,6 @@ function getQueryString() {
 
 var url = location.href;
 //window.alert(url);
-      liff.sendMessages([
-        {
-            type: "text",
-            text:  url,
-        }, 
-        ]).then(function () {
-            window.alert(location.href);
-        }).catch(function (error) {
-            window.alert("請在 Channel 中執行。\n\n錯誤碼: " + error);
-        });
 if (url.indexOf('?')!=-1)
 {
     var id = "";
@@ -51,7 +41,7 @@ if (url.indexOf('?')!=-1)
             id = decodeURI(ary[i].split('=')[1]);
             windiw.id = id.replace(/%40/,"@");
             const idname = document.getElementById("id");
-            idname.innerText = windiw.id;
+            idname.innerText = url + windiw.id;
     }
     //alert(id);
 } else {
