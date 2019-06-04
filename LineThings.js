@@ -45,6 +45,7 @@ if (url.indexOf('?')!=-1)
         if(ary[i].split('=')[0] == 'closeModals') {
            //window.alert("請從 Channel 開啟。");
            liff.closeWindow();
+           document.getElementById("id").innerText  = "您從連結的裝置執行，建議從 Channel 開啟執行。";
         }
     }
     //alert(id);
