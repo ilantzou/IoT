@@ -43,10 +43,10 @@ if (url.indexOf('?')!=-1)
             const idname = document.getElementById("id");
             idname.innerText = id;
         }
-    }
-    if (!id) {
-       window.alert("請從 Channel 開啟。");
-       liff.closeWindow();
+        if(ary[i].split('=')[0] == 'closeModals') {
+           window.alert("請從 Channel 開啟。");
+           liff.closeWindow();
+        }
     }
     //alert(id);
 } else {
