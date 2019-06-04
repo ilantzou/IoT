@@ -42,6 +42,7 @@ if (url.indexOf('?')!=-1)
     }
     //alert(id);
 } else {
+    alert("請從 Channel 開啟。");
     liff.closeWindow();
 }    
 
