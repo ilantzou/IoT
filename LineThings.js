@@ -29,6 +29,7 @@ window.onload = () => {
 function getQueryString() {
 
 var url = location.href;
+alert(url);
 if (url.indexOf('?')!=-1)
 {
     var id = "";
