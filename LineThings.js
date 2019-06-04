@@ -40,11 +40,10 @@ if (url.indexOf('?')!=-1)
         if(ary[i].split('=')[0] == 'id') {
             id = decodeURI(ary[i].split('=')[1]);
             id = id.replace(/%40/,"@");
-            const idname = document.getElementById("id");
-            idname.innerText = id;
+            document.getElementById("id").innerText  = id;
         }
         if(ary[i].split('=')[0] == 'closeModals') {
-           window.alert("請從 Channel 開啟。");
+           //window.alert("請從 Channel 開啟。");
            liff.closeWindow();
         }
     }
