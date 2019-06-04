@@ -39,6 +39,7 @@ if (url.indexOf('?')!=-1)
         if(ary[i].split('=')[0] == 'id')
             id = decodeURI(ary[i].split('=')[1]);
             id = id.replace(/%40/,"@");
+            document.getElementById("id").value = id;
     }
     //alert(id);
 } else {
