@@ -39,13 +39,13 @@ if (url.indexOf('?')!=-1)
         //如果資料名稱為id的話那就把他取出來
         if(ary[i].split('=')[0] == 'id')
             id = decodeURI(ary[i].split('=')[1]);
-            id = id.replace(/%40/,"@");
+            windiw.id = id.replace(/%40/,"@");
             const idname = document.getElementById("id");
-            idname.innerText = id;
+            idname.innerText = windiw.id;
     }
     //alert(id);
 } else {
-    window.alert("請從 Channel 開啟。");
+    //window.alert("請從 Channel 開啟。");
     liff.closeWindow();
 }    
 
